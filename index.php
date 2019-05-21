@@ -11,6 +11,6 @@
     <link rel="stylesheet" href="style/common.css">
   </head>
   <?php
-    include header.php;
+    include ('header.php');
   ?>
 </HTML>
