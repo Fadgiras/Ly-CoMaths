@@ -2,7 +2,7 @@
 <HTML>
   <?php
   session_start();
-  $_SESSION['Niv'] = 0//test Niv
+  $_SESSION['Niv'] = 2//test Niv
   ?>
   <head>
     <meta charset="utf-8">
@@ -13,4 +13,7 @@
   <?php
     include ('header.php');
   ?>
+  <h1>Bienvenue sur Ly-CoMaths !</h1>
+  <p>Ly-CoMaths est un site où vous pourrez consulter les cours, les corrigés et compléments de vos enseignants.<br>
+  Vous pourrez aussi faire des petits gateaux de riz comme howtobasic et DECHAINER VOTRE RZGE SUR LES OEUFSrdwxftcgyhuji</p>
 </HTML>
