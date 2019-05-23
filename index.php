@@ -1,17 +1,21 @@
 <!DOCTYPE HTML>
 <HTML>
-  <?php
-  session_start();
-  $_SESSION['Niv'] = 2//test Niv
-  ?>
-  <head>
+<head>
     <meta charset="utf-8">
     <title> Ly-CoMaths </title>
     <!--<link rel="stylesheet" href="style.css">-->
-    <link rel="stylesheet" href="style/common.css">
-  </head>
+</head>
   <?php
     include ('header.php');
+    //$_SESSION['Droit'] = 1;//test Droit
+    //$_SESSION['Connecte'] = 1;//test Connecte
+    //$_SESSION['Niv'] = 7;//test Niv de classe
+  if ($_SESSION['Connecte']===1){
+    
+  }
+  else{
+    $_SESSION['Connecte']=0;
+  }
   ?>
   <h1>Bienvenue sur Ly-CoMaths !</h1>
   <p>Ly-CoMaths est un site où vous pourrez consulter les cours, les corrigés et compléments de vos enseignants.<br>
