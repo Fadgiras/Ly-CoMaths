@@ -9,12 +9,12 @@
       <li><a href="index.php"> Accueil </a></li>
       <?php
       session_start();
-      //$_SESSION['Droit'] = 1;//test Droit
-      $_SESSION['Connecte'] = 1;//test Connecte
-      $_SESSION['Niv'] = 7;//test Niv de classe
-      $Nom = 'Helldrac'; // test Nom
-      if($_SESSION['Connecte'] === 1){
-        if ($_SESSION['Niv'] === 7){
+      $_SESSION['droit'] = 0;//test droit
+      $_SESSION['connecte'] = 1;//test connecte
+      $_SESSION['niv'] = 7;//test niv de classe
+      $nom = 'Helldrac'; // test nom
+      if($_SESSION['connecte'] === 1){
+        if ($_SESSION['niv'] === 7){
           echo '<li>Panel Admin<ul>';
       ?>
           <li><a href="GCompte.php">Gestion Des Comptes</a></li>
@@ -27,12 +27,12 @@
       <li>Cours<ul>
           <?php 
           include_once("ConnexionBDD.php");
-          $prof_req = $dbh->prepare('SELECT Nom FROM Utilisateur WHERE Niv = 7');
+          $prof_req = $dbh->prepare('SELECT nom FROM utilisateur WHERE niv = 7');
           $prof_req->execute();
           $results = $prof_req->fetch(PDO::FETCH_ASSOC);
           do {
           ?>
-          <li><a href="cours/<?php echo $results['Nom']; ?>"><?php echo $results['Nom']; ?></a>
+          <li><a href="cours/<?php echo $results['nom']; ?>"><?php echo $results['nom']; ?></a>
           <?php
           } while($results = $prof_req->fetch(PDO::FETCH_ASSOC)); ?>
           </ul>
@@ -41,7 +41,7 @@
           <select>
           <_php  _ sont des ?
           include_once("ConnexionBDD.php");
-          $prof_req = $dbh->query('SELECT Utilisateur.nom FROM Utilisateur WHERE utilisateur.Droit = 1 OR Id=1');
+          $prof_req = $dbh->query('SELECT utilisateur.nom FROM utilisateur WHERE utilisateur.droit = 1 OR Id=1');
           $prof_list = $prof_req->fetchAll();
           foreach ($prof_list as $prof){
           echo '<option value="'.$prof[0].'">'.$prof[0].'</option>';

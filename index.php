@@ -7,14 +7,14 @@
 </head>
   <?php
     include ('header.php');
-    //$_SESSION['Droit'] = 1;//test Droit
-    //$_SESSION['Connecte'] = 1;//test Connecte
-    //$_SESSION['Niv'] = 7;//test Niv de classe
-  if ($_SESSION['Connecte']===1){
+    //$_SESSION['droit'] = 1;//test droit
+    //$_SESSION['connecte'] = 1;//test connecte
+    //$_SESSION['niv'] = 7;//test niv de classe
+  if ($_SESSION['connecte']===1){
     
   }
   else{
-    $_SESSION['Connecte']=0;
+    $_SESSION['connecte']=0;
   }
   ?>
   <h1>Bienvenue sur Ly-CoMaths !</h1>
