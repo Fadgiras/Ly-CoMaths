@@ -52,7 +52,7 @@
         
       </li>
       <li><a href="compte.php"> Compte </a></li>
-      <li><a href="contact.php"> Contacter&nbsp;un&nbsp;professeur</a></li>
+      <li><a href="Contact.php"> Contacter&nbsp;un&nbsp;professeur</a></li>
       </ul>
     </nav>
   </header>

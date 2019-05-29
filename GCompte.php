@@ -5,7 +5,7 @@ include ('header.php');
 <form action="TraitCompte.php" method="POST">
     <input type="radio" name="rad" value="1"/><label>Professeur</label>
 	<input type="radio" name="rad" checked="checked" value="0" id="Eleve"/><label>Eleve</label>
-	<div></div>
+	<div id="toc"></div>
     <table>
             <tr>
                 <td>Nom : </td>
@@ -49,20 +49,22 @@ include ('header.php');
             </tr>
     </table>
 </form>
-<script>// TO FIX Initialisation du script avec les boutons rad 
+<script>
     document.addEventListener("DOMContentLoaded", () => {
-        document.querySelector("input[name=rad]").addEventListener("click", () => {
-            const options = document.querySelectorAll("select");
-            if(document.getElementById('Eleve').checked) {
-                options.forEach(elem => {
-                    elem.style.display = "inherit";
-                });
-            }
-            else {
-                options.forEach(elem => {
-                    elem.style.display = "none";
-                });
-            }
+        document.querySelectorAll("input[name=rad]").forEach(radioButton => {
+            radioButton.addEventListener("click", () => {
+                const options = document.querySelectorAll("select");
+                if(document.getElementById('Eleve').checked) {
+                    options.forEach(elem => {
+                        elem.style.display = "inherit";
+                    });
+                }
+                else {
+                    options.forEach(elem => {
+                        elem.style.display = "none";
+                    });
+                }
+            });
         });
     });
 </script>

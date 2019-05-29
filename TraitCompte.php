@@ -14,7 +14,7 @@ else{
 $mdp = $_POST['mdp'];
 $mdp2 = $_POST['mdp2'];
 $email = $_POST['mail'];
-if($mdp = $mdp2){
+if($mdp === $mdp2){
     $hash = password_hash($mdp, PASSWORD_ARGON2I);
     $req = $dbh->prepare("INSERT INTO utilisateur (nom, prenom, mdp, mail, niv, droit) VALUES ('$nom', '$prenom', '$hash', '$email', '$niv', 0 )");
     $req->execute();
@@ -26,7 +26,7 @@ else{
 // PARTIE VISIBLE
 echo $message;
 if ($erreur){
-    echo ' <a href="compte.php">Veuillez r&eacute;essayer</a>';
+    echo ' <a href="GCompte.php">Veuillez r&eacute;essayer</a>';
   }
 else{
     echo 'Compte Créé ! <br><a href ="GCompte.php">Retour à la page de gestion des comptes</a>';
