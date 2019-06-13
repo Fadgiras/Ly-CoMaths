@@ -1,5 +1,6 @@
 <?php
 include ('header.php');
+if ($_SESSION['niv']===7){
 ?>
 <legend>Création de comptes</legend>
 <form action="TraitCompte.php" method="POST">
@@ -8,12 +9,10 @@ include ('header.php');
 	<div id="toc"></div>
     <table>
             <tr>
-                <td>Nom : </td>
-                <td><input type="text" name="nom" required></td>
+                <td><input type="text" name="nom" placeholder = "Nom" required></td>
             </tr>
             <tr>
-                <td>Prénom : </td>
-                <td><input type="text" name="prenom" required></td>
+                <td><input type="text" name="prenom" placeholder = "Prénom" required></td>
             </tr>
             <tr>
                 <td>
@@ -30,16 +29,13 @@ include ('header.php');
                 </td>
             </tr>
             <tr>
-                <td>Mot de passe : </td>
-                <td><input type="password" name="mdp" required></td>
+                <td><input type="password" name="mdp" placeholder = "Mot de passe" required></td>
             </tr>
             <tr>
-                <td>Confirmation : </td>
-                <td><input type="password" name="mdp2" required></td>
+                <td><input type="password" name="mdp2" placeholder = "Confirmation" required></td>
             </tr>
             <tr>
-                <td>Adresse Mail : </td>
-                <td><input type="email" name="mail" required></td>
+                <td><input type="email" name="mail" placeholder = "Votre Adresse Mail" required></td>
             </tr>
             <tr>
                 <td></td>
@@ -68,3 +64,9 @@ include ('header.php');
         });
     });
 </script>
+<?php
+}
+else{
+    echo'Accès refusé.';
+}
+?>

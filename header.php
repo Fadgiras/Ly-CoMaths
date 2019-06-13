@@ -19,7 +19,7 @@
       ?>
           <li><a href="GCompte.php">Gestion Des Comptes</a></li>
           <li><a href="GFichier.php">Gestion Des Fichiers</a></li>
-          <li><a href="GCours.php">Mise en ligne des Cours</a></li></ul>
+          <li><a href="GCours.php">Gestion Des Cours</a></li></ul>
         <?php
         }
       }

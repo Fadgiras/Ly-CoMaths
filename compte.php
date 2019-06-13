@@ -6,16 +6,13 @@ include ('header.php');
     <form action="TraitCo.php" method="POST">
 	    <table>
 				<tr>
-					<td>Nom</td>
-					<td><input type="text" name="nom" required></td>
+					<td><input type="text" name="nom" placeholder = "Nom" required></td>
 				</tr>
 				<tr>
-					<td>Prénom</td>
-					<td><input type="text" name="prenom" required></td>
+					<td><input type="text" name="prenom" placeholder = "Prénom" required></td>
 				</tr>
 				<tr>
-					<td>Mot de passe</td>
-					<td><input type="password" name="mdp" required></td>
+					<td><input type="password" name="mdp" placeholder = "Mot de passe" required></td>
 				</tr>
 				<tr>
 					<td></td>

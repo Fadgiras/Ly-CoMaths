@@ -2,9 +2,9 @@
 include ('header.php');
 ?>
 <legend></legend>
-<form action="TraitContact.php" method="POST">
+<form action="TraitMess.php" method="POST">
         <p>
-            <select>
+            <select name="desti">
                 <option selected disabled>Choisissez votre Professeur</option>
                 <?php // _ sont des ?
                 include_once("ConnexionBDD.php");
@@ -17,7 +17,16 @@ include ('header.php');
             </select>
         </p>
         <p>
-            <textarea id="message" name="message" tabindex="4" cols="30" rows="8">Votre message</textarea>
+            <input type="text" name="prenom" placeholder = "prénom" required>
+        </p>
+        <p>
+            <input type="text" name="nom" placeholder = "nom" required>
+        </p>
+        <p>
+            <input type="text" name="sujet" placeholder = "sujet" required>
+        </p>
+        <p>
+            <textarea id="message" name="mess" tabindex="4" cols="30" rows="8" placeholder = "Entrez votre message"></textarea>
         </p>
             <input type="file" name="Fichier" id="Fichier">
             <script>
@@ -29,7 +38,6 @@ include ('header.php');
                     };
                 };
             </script>
-           
         <p>
             <input type="submit" name="Valider">
         </p>
