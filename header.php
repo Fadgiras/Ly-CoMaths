@@ -36,20 +36,6 @@
           <?php
           } while($results = $prof_req->fetch(PDO::FETCH_ASSOC)); ?>
           </ul>
-        
-        <!--< morceau de code qui servira
-          <select>
-          <_php  _ sont des ?
-          include_once("ConnexionBDD.php");
-          $prof_req = $dbh->query('SELECT utilisateur.nom FROM utilisateur WHERE utilisateur.droit = 1 OR Id=1');
-          $prof_list = $prof_req->fetchAll();
-          foreach ($prof_list as $prof){
-          echo '<option value="'.$prof[0].'">'.$prof[0].'</option>';
-            }
-         _>
-         </select>
-         >-->
-        
       </li>
       <li><a href="compte.php"> Compte </a></li>
       <li><a href="Contact.php"> Contacter&nbsp;un&nbsp;professeur</a></li>

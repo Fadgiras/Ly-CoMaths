@@ -64,6 +64,25 @@ if ($_SESSION['niv']===7){
         });
     });
 </script>
+<legend>Gestion des comptes</legend>
+<table name="TabUtil">
+<?php 
+    include_once("ConnexionBDD.php");
+    $prof_req = $dbh->prepare('SELECT nom, prenom, mail FROM utilisateur');
+    $prof_req->execute();
+    $results = $prof_req->fetch(PDO::FETCH_ASSOC);
+    do {
+    ?>
+    <tr>
+        <td><?php echo $results['nom'] ?></td>
+        <td><?php echo $results['prenom'] ?></td>
+        <td><?php echo $results['mail'] ?></td>
+    </tr>
+    <?php
+    } while($results = $prof_req->fetch(PDO::FETCH_ASSOC)); 
+?>
+</table>
+
 <?php
 }
 else{
